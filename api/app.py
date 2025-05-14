@@ -2,23 +2,23 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-# Sample data - in a real application, this would come from a database
-office_scores = {
-    "google": [
-        {"name": "Transit Accessibility", "score": 85},
-        {"name": "Walking Distance", "score": 92},
-        {"name": "Frequency of Service", "score": 78}
-    ],
-    "microsoft": [
-        {"name": "Transit Accessibility", "score": 76},
-        {"name": "Walking Distance", "score": 88},
-        {"name": "Frequency of Service", "score": 81}
-    ],
-    "apple": [
-        {"name": "Transit Accessibility", "score": 90},
-        {"name": "Walking Distance", "score": 85},
-        {"name": "Frequency of Service", "score": 95}
-    ]
+
+offices = {
+    "platform94": {
+        "barna": 6,
+        "knocknacarra": 8,
+        "oranmore": 7
+    },
+    "portershed": {
+        "barna": 6,
+        "knocknacarra": 8,
+        "oranmore": 7
+    },
+    "parkmore": {
+        "barna": 6,
+        "knocknacarra": 8,
+        "oranmore": 7
+    }
 }
 
 @app.route('/score', methods=['GET'])
@@ -28,10 +28,10 @@ def get_score():
     if not office_name:
         return jsonify({"error": "office_name parameter is required"}), 400
     
-    if office_name not in office_scores:
+    if office_name not in offices.keys():
         return jsonify({"error": f"No data found for office: {office_name}"}), 404
     
-    return jsonify(office_scores[office_name])
+    return jsonify(offices[office_name])
 
 @app.route('/', methods=['GET'])
 def home():
