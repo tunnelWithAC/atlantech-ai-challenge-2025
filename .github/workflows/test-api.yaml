@@ -21,10 +21,10 @@ jobs:
       with:
         project_id: ${{ env.PROJECT_ID }}
         credentials_json: ${{ secrets.GCP_DEV_SERVICE_ACCOUNT }}
-    - name: Set up Python 3.10
+    - name: Set up Python 3.13
       uses: actions/setup-python@v1
       with:
-        python-version: 3.10.15
+        python-version: 3.13
         cache: 'pip' # caching pip dependencies
     - name: Install Python dependencies
       run: |
