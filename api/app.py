@@ -33,15 +33,6 @@ def get_score():
     
     return jsonify(offices[office_name])
 
-@app.route('/', methods=['GET'])
-def home():
-    return jsonify({
-        "message": "Welcome to the Office Score API",
-        "endpoints": {
-            "GET /score": "Get scores for an office (required parameter: office_name)"
-        },
-        "available_offices": list(office_scores.keys())
-    })
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True) 
