@@ -31,7 +31,10 @@ def get_score():
     if office_name not in offices.keys():
         return jsonify({"error": f"No data found for office: {office_name}"}), 404
     
-    return jsonify(offices[office_name])
+    results = {
+        'scores': offices[office_name]
+    }
+    return jsonify(results)
 
 
 if __name__ == '__main__':
