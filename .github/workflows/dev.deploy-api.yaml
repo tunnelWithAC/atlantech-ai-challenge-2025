@@ -1,0 +1,117 @@
+
+name: dev.api-deployment-pipeline
+on:
+  push:
+    tags: [ dev.deploy-api-* ]
+    paths: [.github/workflows/deploy-api.yaml, api]
+env:
+  ENVIRONMENT: dev
+  PROJECT_ID: rules-engine-dev-393220
+  REGION: europe-west1
+  SERVICE_NAME: atlantechapi
+  WORKING_DIRECTORY: api
+jobs:
+  unit-test:
+    name: Unit Test
+    runs-on: ubuntu-latest
+    steps:
+    # Downloads a copy of the code in your repository before running CI tests
+    - name: Checkout
+      uses: actions/checkout@v2
+    - uses: 'google-github-actions/auth@v2'
+      with:
+        project_id: ${{ env.PROJECT_ID }}
+        credentials_json: ${{ secrets.GCP_DEV_SERVICE_ACCOUNT }}
+    - name: Set up Python 3.13
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.13
+        cache: 'pip' # caching pip dependencies
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pytest
+      working-directory: ${{ env.WORKING_DIRECTORY }}
+    - name: Run unit tests
+      working-directory: ${{ env.WORKING_DIRECTORY }}
+      run: |
+        python -m pytest test_app.py -v
+    #   env:
+    #     PYTHON_ENV: 'TEST'
+    #   run: |
+    #      firebase emulators:exec --only firestore 'pytest -o log_cli=true tests'
+  build:
+    name: Build
+    needs: [unit-test]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - uses: 'google-github-actions/auth@v2'
+      with:
+        project_id: ${{ env.PROJECT_ID }}
+        credentials_json: ${{ secrets.GCP_DEV_SERVICE_ACCOUNT }}
+    - name: Set up Cloud SDK
+      uses: google-github-actions/setup-gcloud@v2
+      with:
+        project_id: ${{ env.PROJECT_ID }}
+    - name: Build artifact
+      working-directory: ${{ env.WORKING_DIRECTORY }}
+      run: |-
+        gcloud builds submit \
+          --tag "gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE_NAME }}:$GITHUB_SHA"
+ 
+  # Deploy image to Cloud Run
+  deploy-dev-cloudrun:
+    name: Deploy API to Dev
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: 'google-github-actions/auth@v2'
+        with:
+          project_id: ${{ env.PROJECT_ID }}
+          credentials_json: ${{ secrets.GCP_DEV_SERVICE_ACCOUNT }}
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
+        with:
+          project_id: ${{ env.PROJECT_ID }}
+      - name: Deploy Dev
+        run: |-
+          gcloud run deploy "${{ env.SERVICE_NAME }}-dev" \
+            --image "gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE_NAME }}:$GITHUB_SHA" \
+            --platform "managed" \
+            --allow-unauthenticated \
+            --max-instances 3 \
+            --set-env-vars "GOOGLE_CLOUD_PROJECT=${{ env.PROJECT_ID }}" \
+            --set-env-vars "ENVIRONMENT=${{ env.ENVIRONMENT }}" \
+            --region ${{ env.REGION }}
+
+  # dev-integration-test:
+  #   name: Integration Tests
+  #   needs: [deploy-dev]
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   # Downloads a copy of the code in your repository before running CI tests
+  #   - name: Checkout
+  #     uses: actions/checkout@v2
+  #   - name: Set up Python 3.13
+  #     uses: actions/setup-python@v1
+  #     with:
+  #       python-version: 3.13
+  #       cache: 'pip' # caching pip dependencies
+  #   - name: Install Python dependencies
+  #     run: |
+  #       python -m pip install --upgrade pip
+  #       pip install pytest requests faker
+  #     working-directory: continuous_integration
+  #   - name: Dev Integration Test
+  #     working-directory: continuous_integration
+  #     env:
+  #       TEST_DOMAIN_URL: <add url here>
+  #     run: |
+  #       python -m pytest api_integration_tests.py
+
