@@ -1,0 +1,17 @@
+﻿OBJECTID,MGID,Cycle_Lane,Length_KM,Type,GlobalID,Shape__Length
+1,1,Western Distributer Road,3.00386925425,Cycle Track,08a507e3-06c7-4e1f-98e2-76c11eb7e6e7,3003.8694072358
+2,5,Doughiska Road,0, ,f8a374a3-ced3-4c89-b640-fcbacf0c4a12,1431.67823852793
+3,6,Parkmore Road,0, ,1ca15035-37ee-479c-b672-836b06191c75,1013.15876986797
+4,7,Dangan,0,Cycleway or Greenway,46b3a17b-66a8-43b1-a4f6-8b7688e42f86,2297.35280205652
+5,9,Canal Walk,0, ,521e4b33-3478-44b8-a1ff-c1d749de7bb0,1079.34449683802
+6,10,Fisheries Field,0, ,8a26c78a-d760-4d64-aa4c-f30ca0fbdfbe,329.630453180266
+7,11,Newtownsmith,0, ,0c576137-fe5b-4e62-b5ce-b8ae9dbedb0c,432.297488312805
+8,0,Seamus Quirke Road,0, ,4dda248f-55c3-46bb-98cb-37206dbb6d1b,1733.39479646185
+9,5,N6 Corridor,4.65628040815, ,49aadbe5-35df-4ae9-8f06-35a7042cd16e,4656.28050306925
+10,1,Doughiska Road to Renmore Road,0,Inbound,44492a14-8647-4ff2-9f9d-5ceb7eb6bfb8,3163.48936656916
+11,0,Renmore Road to Doughiska Road,0,Outbound,b85b2a3f-c02a-4d0a-be5a-fc26e4a25a81,941.594931300406
+12,0,Bothar an Choiste,0, ,55889f92-7fb0-4c4c-b10b-25d1a2c1f5b4,876.016847976398
+13,0,"Bothar Ui Eithir, Forster St.",0, ,fb845941-597e-472a-b9d0-9a25f085a28e,303.34721613895
+14,16,South Park,0.63951598889, ,3b9bb539-e847-4579-b856-35ed61435954,800.08758409126
+15,0,NUIG,0, ,0380c838-0a21-4043-a842-1288ff23f4f5,787.22127407752
+16,0,Rahoon Road,0,Bus Lane,3d8c80d4-4e6f-4ecd-adc0-035a5a4adaac,265.893708084459
