@@ -1,31 +1,14 @@
 
-import { useState } from "react";
 import { BuildingAccessForm } from "@/components/BuildingAccessForm";
-import { AccessibilityResult, AccessibilityData } from "@/components/AccessibilityResult";
-import { fetchBuildingAccessibility } from "@/utils/mockData";
+import { AccessibilityResult } from "@/components/AccessibilityResult";
+import { useBuildingAccessibility } from "@/hooks/use-building-accessibility";
 import { useToast } from "@/components/ui/use-toast";
 
 const Index = () => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [accessibilityData, setAccessibilityData] = useState<AccessibilityData | null>(null);
-  const { toast } = useToast();
+  const {data: accessibilityData, isLoading, getBuildingAccessibility} = useBuildingAccessibility();
 
-  const handleBuildingSubmit = async (buildingId: string) => {
-    setIsLoading(true);
-    try {
-      const data = await fetchBuildingAccessibility(buildingId);
-      setAccessibilityData(data);
-    } catch (error) {
-      console.error("Failed to fetch building data:", error);
-      toast({
-        title: "Error",
-        description: "Failed to load building accessibility data. Please try again.",
-        variant: "destructive"
-      });
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  const handleBuildingSubmit =  (buildingId: string) => 
+    getBuildingAccessibility(buildingId);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky-50 to-white">

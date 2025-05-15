@@ -17,21 +17,13 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
+import { BUILDINGS_LIST } from "@/constants";
 
 interface BuildingAccessFormProps {
   onSubmit: (buildingId: string) => void;
   isLoading: boolean;
 }
 
-const BUILDINGS = [
-  { id: "bldg-1", name: "Downtown Office Tower" },
-  { id: "bldg-2", name: "Riverside Apartments" },
-  { id: "bldg-3", name: "Central Library" },
-  { id: "bldg-4", name: "City Hospital" },
-  { id: "bldg-5", name: "University Campus Center" },
-  { id: "bldg-6", name: "Tech Innovation Hub" },
-  { id: "bldg-7", name: "Westside Shopping Mall" },
-];
 
 export const BuildingAccessForm = ({ onSubmit, isLoading }: BuildingAccessFormProps) => {
   const [selectedBuilding, setSelectedBuilding] = useState<string>("");
@@ -59,9 +51,9 @@ export const BuildingAccessForm = ({ onSubmit, isLoading }: BuildingAccessFormPr
               </SelectTrigger>
               <SelectContent>
                 <SelectGroup>
-                  {BUILDINGS.map((building) => (
-                    <SelectItem key={building.id} value={building.id}>
-                      {building.name}
+                  {BUILDINGS_LIST.map((building) => (
+                    <SelectItem key={building} value={building}>
+                      {building}
                     </SelectItem>
                   ))}
                 </SelectGroup>

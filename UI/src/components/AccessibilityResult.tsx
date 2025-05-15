@@ -20,7 +20,7 @@ export interface AccessibilityData {
   buildingId: string;
   buildingName: string;
   score: number;
-  // transportOptions: TransportOption[];
+  transportOptions: TransportOption[];
   explanation: string;
 }
 
