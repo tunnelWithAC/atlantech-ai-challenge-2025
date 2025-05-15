@@ -88,7 +88,6 @@ jobs:
             --max-instances 3 \
             --set-env-vars "GOOGLE_CLOUD_PROJECT=${{ env.PROJECT_ID }}" \
             --set-env-vars "ENVIRONMENT=${{ env.ENVIRONMENT }}" \
-            --set-env-vars "LIFT_FIRESTORE_COLLECTION=liftsDev" \
             --region ${{ env.REGION }}
 
   # dev-integration-test:
