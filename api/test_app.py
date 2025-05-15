@@ -13,9 +13,11 @@ def test_get_score_success(client):
     assert response.status_code == 200
     data = response.get_json()
     assert data == {
-        "barna": 6,
-        "knocknacarra": 8,
-        "oranmore": 7
+        "scores": {
+            "barna": 6,
+            "knocknacarra": 8,
+            "oranmore": 7
+        }
     }
 
 def test_get_score_missing_parameter(client):
@@ -38,7 +40,9 @@ def test_get_score_case_insensitive(client):
     assert response.status_code == 200
     data = response.get_json()
     assert data == {
-        "barna": 6,
-        "knocknacarra": 8,
-        "oranmore": 7
+        "scores": {
+            "barna": 6,
+            "knocknacarra": 8,
+            "oranmore": 7
+        }
     } 
