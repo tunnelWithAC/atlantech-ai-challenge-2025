@@ -1,5 +1,8 @@
 import pytest
 from app import app
+import json
+from unittest.mock import patch
+import requests
 
 @pytest.fixture
 def client():
@@ -45,4 +48,47 @@ def test_get_score_case_insensitive(client):
             "knocknacarra": 8,
             "oranmore": 7
         }
-    } 
+    }
+
+def test_ollama_request_success(client):
+    """Test successful Ollama request"""
+    mock_response = {
+        "response": "This is a test response",
+        "model": "llama2"
+    }
+    
+    with patch('requests.post') as mock_post:
+        mock_post.return_value.status_code = 200
+        mock_post.return_value.json.return_value = {"response": "This is a test response"}
+        
+        response = client.post('/ollama', 
+                             json={"prompt": "Test prompt"},
+                             content_type='application/json')
+        
+        assert response.status_code == 200
+        data = response.get_json()
+        assert data["response"] == "This is a test response"
+        assert data["model"] == "llama2"
+
+def test_ollama_request_missing_prompt(client):
+    """Test error when prompt is missing"""
+    response = client.post('/ollama', 
+                         json={},
+                         content_type='application/json')
+    
+    assert response.status_code == 400
+    data = response.get_json()
+    assert data["error"] == "prompt is required"
+
+def test_ollama_request_connection_error(client):
+    """Test error handling when Ollama is not available"""
+    with patch('requests.post') as mock_post:
+        mock_post.side_effect = requests.exceptions.RequestException("Connection error")
+        
+        response = client.post('/ollama', 
+                             json={"prompt": "Test prompt"},
+                             content_type='application/json')
+        
+        assert response.status_code == 500
+        data = response.get_json()
+        assert "Failed to connect to Ollama" in data["error"] 
