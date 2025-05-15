@@ -1,4 +1,4 @@
-,route_long_name,g_trip_headsign,route_id,route_short_name,direction_id,variation_route_id,first_stop_id,last_stop_id,first_stop_name,last_stop_name,num_stops,first_stop_point,last_stop_point
+br_index,route_long_name,g_trip_headsign,route_id,route_short_name,direction_id,variation_route_id,first_stop_id,last_stop_id,first_stop_name,last_stop_name,num_stops,first_stop_point,last_stop_point
 BR1,Eyre Square - Salthill,Dr. Mannix Road,401,401,0,4023_65528,8460B5234401,8460B5221101,Ballybrit RC,Salthill Park,37,POINT (-8.98609174633832 53.297332735448),POINT (-9.07901743408459 53.2582955027338)
 BR2,Eyre Square - Salthill,Dr. Mannix Road,401,401,0,4023_65528,8460B5234401,8460B522301,Ballybrit RC,Scoil Éinde Boys NS,37,POINT (-8.98609174633832 53.297332735448),POINT (-9.08315723300364 53.2643514959341)
 BR3,Eyre Square - Salthill,Dr. Mannix Road,401,401,0,4023_65528,8460B5234401,8460B5221401,Ballybrit RC,Forster Park,37,POINT (-8.98609174633832 53.297332735448),POINT (-9.0801860381487 53.2642256636509)
