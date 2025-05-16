@@ -1,7 +1,6 @@
 import os
 
 from flask import Flask, request, jsonify
-import networkx as nx
 import pandas as pd
 import pickle
 
@@ -56,35 +55,38 @@ offices = {
 
 @app.route('/score', methods=['GET'])
 def get_score():
-    office_name = request.args.get('office_name', '').lower()
-    
-    if not office_name:
-        return jsonify({"error": "office_name parameter is required"}), 400
-    
-    if office_name not in offices.keys():
-        return jsonify({"error": f"No data found for office: {office_name}"}), 404
-
+    ### SETUP
     MAX_ACCESS_DISTANCE_METERS = 800
-    # TODO add as params
-
-    # # For tool1: journey and accessibility check:
-    # places_ids_list= ['Ballybrit', 'Rahoon', 'Renmore', 'Shantallow', 'Knocknacarragh', 'Doughiska', 'NUIG Education', ]
-    # buildings_ids_list= ['Salthill Lodge', 'Eyre Square Centre', 'Galway Cathedral', 'Merchants Quay', 'Spanish Arch Car Park', 'Merlin Park', 'Portershed' ]
 
     """
     Barna -> Doughiska
     Knocknacarra -> Knocknacarragh
     Oranmore -> Ballybrit
     """
+    ###
 
+    building_ids = {
+        '1': 'Salthill Lodge',
+        '2': 'Eyre Square Centre',
+        '3': 'Galway Cathedral',
+        '4': 'Merchants Quay',
+        '5': 'Spanish Arch Car Park',
+        '6': 'Merlin Park',
+        '7': 'Portershed'
+    }
 
-    place_node_id = "NUIG Education"  # This is the specific node ID for Rahoon
+    building_id = request.args.get('building_id', '').lower()
+    
+    if not building_id:
+        return jsonify({"error": "building_id parameter is required"}), 400
+    
+    if building_id not in building_ids.keys():
+        return jsonify({"error": f"No data found for building id: {building_ids}"}), 404
+    place_node_id = building_ids[building_id]  # This is the specific node ID for Rahoon
 
-    def get_place_accessibility_score(place_node_id, building_node_id = "Renmore"):
-        # building_node_id = "Renmore" # This is the specific node ID for Portershed
-
+    def _get_place_accessibility_score(__place_node_id, building_node_id):
         # --- Call get_nearby_stops for Rahoon ---
-        place_node_id, place_nearby_stops = get_nearby_stops(G, place_node_id, MAX_ACCESS_DISTANCE_METERS)
+        __place_node_id, place_nearby_stops = get_nearby_stops(G, __place_node_id, MAX_ACCESS_DISTANCE_METERS)
 
         # --- Call get_nearby_stops for Portershed ---
         building_node_id, building_nearby_stops = get_nearby_stops(G, building_node_id, MAX_ACCESS_DISTANCE_METERS)
@@ -92,7 +94,7 @@ def get_score():
         place_to_building_connections_df, no_conn_df = get_enriched_transit_connections(
             G_input=G,
             bus_timetables_input=bus_timetables,
-            origin_poi_name_param=place_node_id,
+            origin_poi_name_param=__place_node_id,
             origin_nearby_stops_info_param=place_nearby_stops,
             destination_poi_name_param=building_node_id,
             destination_nearby_stops_info_param=building_nearby_stops
@@ -107,14 +109,18 @@ def get_score():
         # Generate accessibility score
         return calculate_and_display_accessibility_score(place_to_building_connections_df)
 
-    renmore_accessibility_score = get_place_accessibility_score(place_node_id, "Renmore")
-    knocknacrra_accessibility_score = get_place_accessibility_score(place_node_id, "Knocknacarragh")
-    ballybrit_accessibility_score = get_place_accessibility_score(place_node_id, "Ballybrit")
+    renmore_accessibility_score = _get_place_accessibility_score(place_node_id, "Renmore")
+    knocknacrra_accessibility_score = _get_place_accessibility_score(place_node_id, "Knocknacarragh")
+    ballybrit_accessibility_score = _get_place_accessibility_score(place_node_id, "Ballybrit")
 
     accessibility_score = (renmore_accessibility_score + knocknacrra_accessibility_score + ballybrit_accessibility_score) / 3
 
     results = {
-        'scores': offices[office_name],
+        'scores': {
+            "barna": renmore_accessibility_score,
+            "knocknacarra": knocknacrra_accessibility_score,
+            "oranmore": ballybrit_accessibility_score
+        },
         'accessibility_score': accessibility_score
     }
     return jsonify(results)
