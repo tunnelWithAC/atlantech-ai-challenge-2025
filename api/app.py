@@ -21,24 +21,14 @@ bus_routes_path = os.path.join(artifact_dir, "bus_routes_gdf.csv")
 graph_pickle_path = os.path.join(artifact_dir, "G.gpickle")
 place_to_building_connections_path = os.path.join(artifact_dir, "place_to_building_connections_df.csv")
 
-# if os.path.isdir(artifact_dir):
-#     raise Exception("Unable to find artifacts directory")
-
 # Save galway_places_summary_df1 (replaces if file exists)
 galway_places_summary_df1 = pd.read_csv(places_summary_path)
-# Save galway_buildings_summary_df1 (replaces if file exists)
-
 galway_buildings_summary_df1 = pd.read_csv(buildings_summary_path)
 
 bus_stops_gdf = pd.read_csv(bus_stops_path)
-
 bus_timetables = pd.read_csv(bus_timetables_path)
 bus_routes_gdf = pd.read_csv(bus_routes_path)
 
-# Save the graph G as a pickle file (replaces if file exists)
-# if 'G' in locals() and G is not None:
-#     with open(graph_pickle_path, "wb") as f:
-#         pickle.dump(G, f, pickle.HIGHEST_PROTOCOL)
 
 with open(graph_pickle_path, "rb") as f:
     G = pickle.load(f)
@@ -76,32 +66,52 @@ def get_score():
 
     MAX_ACCESS_DISTANCE_METERS = 800
     # TODO add as params
+
+    # # For tool1: journey and accessibility check:
+    # places_ids_list= ['Ballybrit', 'Rahoon', 'Renmore', 'Shantallow', 'Knocknacarragh', 'Doughiska', 'NUIG Education', ]
+    # buildings_ids_list= ['Salthill Lodge', 'Eyre Square Centre', 'Galway Cathedral', 'Merchants Quay', 'Spanish Arch Car Park', 'Merlin Park', 'Portershed' ]
+
+    """
+    Barna -> Doughiska
+    Knocknacarra -> Knocknacarragh
+    Oranmore -> Ballybrit
+    """
+
+
     place_node_id = "NUIG Education"  # This is the specific node ID for Rahoon
-    building_node_id = "Ballybrit" # This is the specific node ID for Portershed
 
-    # --- Call get_nearby_stops for Rahoon ---
-    place_node_id, place_nearby_stops = get_nearby_stops(G, place_node_id, MAX_ACCESS_DISTANCE_METERS)
+    def get_place_accessibility_score(place_node_id, building_node_id = "Renmore"):
+        # building_node_id = "Renmore" # This is the specific node ID for Portershed
 
-    # --- Call get_nearby_stops for Portershed ---
-    building_node_id, building_nearby_stops = get_nearby_stops(G, building_node_id, MAX_ACCESS_DISTANCE_METERS)
+        # --- Call get_nearby_stops for Rahoon ---
+        place_node_id, place_nearby_stops = get_nearby_stops(G, place_node_id, MAX_ACCESS_DISTANCE_METERS)
 
-    place_to_building_connections_df, no_conn_df = get_enriched_transit_connections(
-        G_input=G,
-        bus_timetables_input=bus_timetables,
-        origin_poi_name_param=place_node_id,
-        origin_nearby_stops_info_param=place_nearby_stops,
-        destination_poi_name_param=building_node_id,
-        destination_nearby_stops_info_param=building_nearby_stops
-    )
+        # --- Call get_nearby_stops for Portershed ---
+        building_node_id, building_nearby_stops = get_nearby_stops(G, building_node_id, MAX_ACCESS_DISTANCE_METERS)
 
-    print("\n--- Results from get_enriched_transit_connections (Example) ---")
-    if place_to_building_connections_df is not None and not place_to_building_connections_df.empty:
-        print("Enriched Connections DataFrame:")
-    else:
-        print("No enriched connections found or DataFrame is None.")
+        place_to_building_connections_df, no_conn_df = get_enriched_transit_connections(
+            G_input=G,
+            bus_timetables_input=bus_timetables,
+            origin_poi_name_param=place_node_id,
+            origin_nearby_stops_info_param=place_nearby_stops,
+            destination_poi_name_param=building_node_id,
+            destination_nearby_stops_info_param=building_nearby_stops
+        )
 
-    # Generate accessibility score
-    accessibility_score = calculate_and_display_accessibility_score(place_to_building_connections_df)
+        print("\n--- Results from get_enriched_transit_connections (Example) ---")
+        if place_to_building_connections_df is not None and not place_to_building_connections_df.empty:
+            print("Enriched Connections DataFrame:")
+        else:
+            print("No enriched connections found or DataFrame is None.")
+
+        # Generate accessibility score
+        return calculate_and_display_accessibility_score(place_to_building_connections_df)
+
+    renmore_accessibility_score = get_place_accessibility_score(place_node_id, "Renmore")
+    knocknacrra_accessibility_score = get_place_accessibility_score(place_node_id, "Knocknacarragh")
+    ballybrit_accessibility_score = get_place_accessibility_score(place_node_id, "Ballybrit")
+
+    accessibility_score = (renmore_accessibility_score + knocknacrra_accessibility_score + ballybrit_accessibility_score) / 3
 
     results = {
         'scores': offices[office_name],
