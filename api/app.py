@@ -1,4 +1,6 @@
 from flask import Flask, request, jsonify
+from ollama import chat
+from ollama import ChatResponse
 
 app = Flask(__name__)
 
@@ -20,6 +22,26 @@ offices = {
         "oranmore": 7
     }
 }
+
+
+@app.route('/prompt', methods=['GET'])
+def answer_prmopt():
+    prompt = request.args.get('prompt', '').lower() 
+    if not prompt:
+        return jsonify({"error": "prompt parameter is required"}), 400
+    
+    response: ChatResponse = chat(model='llama3.2', messages=[
+    {
+        'role': 'user',
+        'content': 'Why is the sky blue?',
+    },
+    ])
+
+    result = {
+        'content': response.message.content
+    }
+    return jsonify(result)
+
 
 @app.route('/score', methods=['GET'])
 def get_score():
