@@ -1,4 +1,4 @@
-,route_id,ROUTE,stop_order_on_route,ROUTE_norm_explicit,ROUTE_norm_expanded,stop_id_mapped,match_method,matched_stop_name_in_gdf,fuzz_ratio_score,fuzz_wratio_score
+,route_id,route,stop_order_on_route,route_norm_explicit,route_norm_expanded,stop_id_mapped,match_method,matched_stop_name_in_gdf,fuzz_ratio_score,fuzz_wratio_score
 0,401,Parkmore Rd (Roundabout),0,parkmore rd (roundabout),parkmore road roundabout,8460B555431,Fuzzy Expanded Name (WRatio: 90),Parkmore Road,70.0,90.0
 1,401,Ballybrit RC,1,ballybrit rc,ballybrit rc,8460B5234401,"Exact Expanded Name (Multiple GDF matches, took first)",Ballybrit RC,100.0,100.0
 2,401,Parkmore Rd (Opp Western Motors Entr),2,parkmore rd (opp western motors entr),parkmore road opposite western motors entr,8460B555431,Fuzzy Expanded Name (WRatio: 90),Parkmore Road,47.0,90.0
@@ -75,7 +75,7 @@
 73,402,Fuschia Drive (Larchfield Ave),36,fuschia drive (larchfield ave),fuschia drive larchfield avenue,8460B5228701,Fuzzy Expanded Name (WRatio: 90),Fuschia Drive,59.0,90.0
 74,402,Ballyloughane Rd (Op Murrough Ave Jct),37,ballyloughane rd (op murrough ave jct),ballyloughane road op murrough avenue jct,8460B5227801,Fuzzy Expanded Name (WRatio: 90),Ballyloughane Road,61.0,90.0
 75,402,Ballyloughane Rd (Dairies),38,ballyloughane rd (dairies),ballyloughane road dairies,8460B5227801,Fuzzy Expanded Name (WRatio: 95),Ballyloughane Road,82.0,95.0
-76,402,ATU Galway,39,atu galway,atu galway,8460B5236501,Fuzzy Expanded Name (WRatio: 90),ATU Galway Cluain Mhuire,59.0,90.0
+76,402,ATU Galway City,39,atu galway city,atu galway city,8460B5228101,"Exact Expanded Name (Multiple GDF matches, took first)",ATU Galway City,100.0,100.0
 77,402,Dublin Rd (Merlin Park Gate),40,dublin rd (merlin park gate),dublin road merlin park gate,8460B5228001,Token Overlap Match (Score: 2),Merlin Hospital Gate,,
 78,402,Merlin Park Terminus (Merlin Church),41,merlin park terminus (merlin church),merlin park terminus merlin church,8460B5228201,Token Overlap Match (Score: 2),Merlin Park Hospital,,
 79,404,Oranmore (Opp Oran Town Centre),0,oranmore (opp oran town centre),oranmore opposite oran town centre,8470B556161,Token Overlap Match (Score: 2),Oranmore Centre,,
@@ -84,7 +84,7 @@
 82,404,Dublin Rd (Castlegar Complex),3,dublin rd (castlegar complex),dublin road castlegar complex,8460B5223701,Token Overlap Match (Score: 1),Barna Road,,
 83,404,Dublin Rd (Kingsvalley Hotel),4,dublin rd (kingsvalley hotel),dublin road kingsvalley hotel,8460B5223701,Token Overlap Match (Score: 1),Barna Road,,
 84,404,Dublin Rd (Opp Woodhaven),5,dublin rd (opp woodhaven),dublin road opposite woodhaven,8460B5228301,Fuzzy Expanded Name (WRatio: 90),Woodhaven,46.0,90.0
-85,404,ATU Galway,6,atu galway,atu galway,8460B5236501,Fuzzy Expanded Name (WRatio: 90),ATU Galway Cluain Mhuire,59.0,90.0
+85,404,ATU Galway City,6,atu galway city,atu galway city,8460B5228101,"Exact Expanded Name (Multiple GDF matches, took first)",ATU Galway City,100.0,100.0
 86,404,Dublin Rd (Dawn Dairies),7,dublin rd (dawn dairies),dublin road dawn dairies,8460B5227901,Fuzzy Expanded Name (WRatio: 90),Dawn Dairies,67.0,90.0
 87,404,Dublin Rd (Opp Glenina Hgts),8,dublin rd (opp glenina hgts),dublin road opposite glenina hgts,8460B5223701,Token Overlap Match (Score: 1),Barna Road,,
 88,404,Dublin Rd (Woodlands),9,dublin rd (woodlands),dublin road woodlands,8460B5223701,Token Overlap Match (Score: 1),Barna Road,,
@@ -164,7 +164,7 @@
 163,409,Dublin Rd (Opp Renmore Park),6,dublin rd (opp renmore park),dublin road opposite renmore park,8460B5227001,Fuzzy Expanded Name (WRatio: 90),Renmore Park,53.0,90.0
 164,409,Dublin Rd (Glenina Heights),7,dublin rd (glenina heights),dublin road glenina heights,8460B5243501,Fuzzy Expanded Name (WRatio: 90),Glenina Heights,71.0,90.0
 165,409,Dublin Rd (Opp Dawn Dairies),8,dublin rd (opp dawn dairies),dublin road opposite dawn dairies,8460B5227901,Fuzzy Expanded Name (WRatio: 90),Dawn Dairies,53.0,90.0
-166,409,ATU Galway,9,atu galway,atu galway,8460B5236501,Fuzzy Expanded Name (WRatio: 90),ATU Galway Cluain Mhuire,59.0,90.0
+166,409,ATU Galway City,9,atu galway city,atu galway city,8460B5228101,"Exact Expanded Name (Multiple GDF matches, took first)",ATU Galway City,100.0,100.0
 167,409,Dublin Rd (Opp Galway Crystal Jctn),10,dublin rd (opp galway crystal jctn),dublin road opposite galway crystal jctn,8460B5241501,Fuzzy Expanded Name (WRatio: 90),Galway Crystal,52.0,90.0
 168,409,Dublin Rd (Opp Castlegar Complex),11,dublin rd (opp castlegar complex),dublin road opposite castlegar complex,8460B5223701,Token Overlap Match (Score: 1),Barna Road,,
 169,409,Doughiska Rd (An Fiodan),12,doughiska rd (an fiodan),doughiska road an fiodan,8460B5241901,Fuzzy Expanded Name (WRatio: 90),An Fiodan,55.0,90.0
