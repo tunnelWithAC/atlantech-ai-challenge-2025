@@ -335,3 +335,6 @@ xxhash==3.5.0
 yarl==1.18.3
 ydata-profiling==4.6.4
 zipp==3.17.0
+flask==2.0.1
+flask-cors==3.0.10
+ollama==0.1.5

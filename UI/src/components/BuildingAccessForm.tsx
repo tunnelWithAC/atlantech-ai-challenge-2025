@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { 
   Card,
@@ -30,7 +29,7 @@ const BUILDINGS = [
   { id: "bldg-4", name: "City Hospital" },
   { id: "bldg-5", name: "University Campus Center" },
   { id: "bldg-6", name: "Tech Innovation Hub" },
-  { id: "bldg-7", name: "Westside Shopping Mall" },
+  { id: "bldg-7", name: "Westside Shopping Mall" }
 ];
 
 export const BuildingAccessForm = ({ onSubmit, isLoading }: BuildingAccessFormProps) => {
