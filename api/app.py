@@ -26,19 +26,36 @@ offices = {
 
 @app.route('/prompt', methods=['GET'])
 def answer_prmopt():
-    prompt = request.args.get('prompt', '').lower() 
-    if not prompt:
-        return jsonify({"error": "prompt parameter is required"}), 400
+    office_name = request.args.get('office_name', '').lower()
+    if not office_name:
+        return jsonify({"error": "office_name parameter is required"}), 400
+    
+    if office_name not in offices:
+        return jsonify({"error": f"No data found for office: {office_name}"}), 404
+
+    office_scores = offices[office_name]
+    
+    # Create a prompt that describes the office based on its scores
+    prompt = f"""
+    Please explain what makes the {office_name} office location great based on these scores:
+    - Proximity to Barna: {office_scores['barna']}/10
+    - Proximity to Knocknacarra: {office_scores['knocknacarra']}/10
+    - Proximity to Oranmore: {office_scores['oranmore']}/10
+    
+    Please provide a natural, enthusiastic response highlighting the office's strengths based on these proximity scores.
+    """
     
     response: ChatResponse = chat(model='llama3.2', messages=[
     {
         'role': 'user',
-        'content': 'Why is the sky blue?',
+        'content': prompt,
     },
     ])
 
     result = {
-        'content': response.message.content
+        'content': response.message.content,
+        'office_name': office_name,
+        'scores': office_scores
     }
     return jsonify(result)
 
