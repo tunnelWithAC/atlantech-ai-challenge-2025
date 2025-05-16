@@ -1,0 +1,178 @@
+,route_id,ROUTE,stop_order_on_route,ROUTE_norm_explicit,ROUTE_norm_expanded,stop_id_mapped,match_method,matched_stop_name_in_gdf,fuzz_ratio_score,fuzz_wratio_score
+0,401,Parkmore Rd (Roundabout),0,parkmore rd (roundabout),parkmore road roundabout,8460B555431,Fuzzy Expanded Name (WRatio: 90),Parkmore Road,70.0,90.0
+1,401,Ballybrit RC,1,ballybrit rc,ballybrit rc,8460B5234401,"Exact Expanded Name (Multiple GDF matches, took first)",Ballybrit RC,100.0,100.0
+2,401,Parkmore Rd (Opp Western Motors Entr),2,parkmore rd (opp western motors entr),parkmore road opposite western motors entr,8460B555431,Fuzzy Expanded Name (WRatio: 90),Parkmore Road,47.0,90.0
+3,401,Monivea Rd (Opp Clayton Hotel),3,monivea rd (opp clayton hotel),monivea road opposite clayton hotel,8460B5234601,Fuzzy Expanded Name (WRatio: 90),Clayton Hotel,54.0,90.0
+4,401,Monivea Rd (Paddocks),4,monivea rd (paddocks),monivea road paddocks,8460B5203201,Fuzzy Expanded Name (WRatio: 90),Monivea Road,73.0,90.0
+5,401,Monivea Rd (Ballybrit Heights),5,monivea rd (ballybrit heights),monivea road ballybrit heights,8460B5234801,Fuzzy Expanded Name (WRatio: 90),Ballybrit Heights,72.0,90.0
+6,401,Ballybrit Ind Est,6,ballybrit ind est,ballybrit industrial estate,8460B5234901,"Exact Expanded Name (Multiple GDF matches, took first)",Ballybrit Industrial Estate,100.0,100.0
+7,401,Castlepark Rd (Glenavon Drive),7,castlepark rd (glenavon drive),castlepark road glenavon drive,8460B5235001,Fuzzy Expanded Name (WRatio: 90),Castlepark Road,67.0,90.0
+8,401,Castlepark Rd (Gortcam),8,castlepark rd (gortcam),castlepark road gortcam,8460B5235001,Fuzzy Expanded Name (WRatio: 90),Castlepark Road,79.0,90.0
+9,401,Castlepark Rd (Sliabh Rua),9,castlepark rd (sliabh rua),castlepark road sliabh rua,8460B5235001,Fuzzy Expanded Name (WRatio: 90),Castlepark Road,73.0,90.0
+10,401,Castlepark Rd (Community Centre),10,castlepark rd (community centre),castlepark road community centre,8460B5235001,Fuzzy Expanded Name (WRatio: 90),Castlepark Road,64.0,90.0
+11,401,Ballybane Rd (John Paul Centre),11,ballybane rd (john paul centre),ballybane road john paul centre,8460B5235601,Token Overlap Match (Score: 2),Ballybane Centre,,
+12,401,Ballybane Rd (St James Rd),12,ballybane rd (st james rd),ballybane road street james road,8460B5258501,Fuzzy Expanded Name (WRatio: 90),St James Road,69.0,90.0
+13,401,Ballybane Rd (Shopping Centre),13,ballybane rd (shopping centre),ballybane road shopping centre,8460B5235601,Token Overlap Match (Score: 2),Ballybane Centre,,
+14,401,Monivea Rd (Monivea Park),14,monivea rd (monivea park),monivea road monivea park,8460B5235801,Fuzzy Expanded Name (WRatio: 90),Monivea Park,65.0,90.0
+15,401,McDonagh Ave (Old Mervue),15,mcdonagh ave (old mervue),mcdonagh avenue old mervue,8460B5227601,Token Overlap Match (Score: 1),Rowan Avenue,,
+16,401,Monivea Rd (Opp Crown Plaza),16,monivea rd (opp crown plaza),monivea road opposite crown plaza,8460B5203201,Fuzzy Expanded Name (WRatio: 90),Monivea Road,53.0,90.0
+17,401,ATU Galway Cluain Mhuire,17,atu galway cluain mhuire,atu galway cluain mhuire,8460B5236501,Exact Expanded Name,ATU Galway Cluain Mhuire,100.0,100.0
+18,401,Monivea Rd (Wellpark Retail Est),18,monivea rd (wellpark retail est),monivea road wellpark retail est,8460B5236601,Fuzzy Expanded Name (WRatio: 90),Wellpark Retail,64.0,90.0
+19,401,College Rd Galway (Opp Loyola Pk),19,college rd galway (opp loyola pk),college road galway opposite loyola pk,8460B5232301,Fuzzy Expanded Name (WRatio: 90),College Road,48.0,90.0
+20,401,College Rd Galway (Opp Sportsground),20,college rd galway (opp sportsground),college road galway opposite sportsground,8460B5232301,Fuzzy Expanded Name (WRatio: 90),College Road,45.0,90.0
+21,401,College Rd Galway (Opp City Hall),21,college rd galway (opp city hall),college road galway opposite city hall,8460B5232301,Fuzzy Expanded Name (WRatio: 90),College Road,48.0,90.0
+22,401,Forster St (Morgans Hotel),22,forster st (morgans hotel),forster street morgans hotel,8460B5243601,Fuzzy Expanded Name (WRatio: 90),Forster Street,67.0,90.0
+23,401,Eyre Square South (Stop No 9)ARR. DEP.,23,eyre square south (stop no 9)arr. dep.,eyre square south stop no 9 arr. dep.,8460B522331,Fuzzy Expanded Name (WRatio: 90),Eyre Square,46.0,90.0
+24,401,Spanish Parade (Spanish Arch),24,spanish parade (spanish arch),spanish parade spanish arch,8460B5220101,Fuzzy Expanded Name (WRatio: 90),Spanish Arch,62.0,90.0
+25,401,Fr Griffin Rd (Opp Fr Griffin Park),25,fr griffin rd (opp fr griffin park),fr griffin road opposite fr griffin park,8460B5220201,Fuzzy Expanded Name (WRatio: 90),Fr Griffin Road,55.0,90.0
+26,401,Fr Griffin Ave (Opp Sea Road),26,fr griffin ave (opp sea road),fr griffin avenue opposite sea road,8460B5220301,Fuzzy Expanded Name (WRatio: 90),Fr Griffin Avenue,65.0,90.0
+27,401,Salthill Rd Lwr (Lios Ealtan),27,salthill rd lwr (lios ealtan),salthill road lower lios ealtan,8460B5220601,Fuzzy Expanded Name (WRatio: 90),Lios Ealtan,52.0,90.0
+28,401,Salthill Rd Lwr (St Josephs),28,salthill rd lwr (st josephs),salthill road lower street josephs,8460B5220701,Fuzzy Expanded Name (WRatio: 90),Salthill Road Lower,72.0,90.0
+29,401,Salthill Rd Lwr (Opp Devon Park),29,salthill rd lwr (opp devon park),salthill road lower opposite devon park,8460B5220701,Fuzzy Expanded Name (WRatio: 90),Salthill Road Lower,66.0,90.0
+30,401,Salthill Rd Lwr (Opp Warwick Hotel),30,salthill rd lwr (opp warwick hotel),salthill road lower opposite warwick hotel,8460B5220701,Fuzzy Expanded Name (WRatio: 90),Salthill Road Lower,62.0,90.0
+31,401,Upper Salthill Rd (Canton Kitchen),31,upper salthill rd (canton kitchen),upper salthill road canton kitchen,8460B5220701,Token Overlap Match (Score: 2),Salthill Road Lower,,
+32,401,Upper Salthill Rd (Opp Western House),32,upper salthill rd (opp western house),upper salthill road opposite western house,8460B5220701,Token Overlap Match (Score: 2),Salthill Road Lower,,
+33,401,Dalysfort Rd (Top of Hill),33,dalysfort rd (top of hill),dalysfort road top of hill,8460B5221201,Fuzzy Expanded Name (WRatio: 90),Dalysfort Road,70.0,90.0
+34,401,Dalysfort Rd (Hollands Shop),34,dalysfort rd (hollands shop),dalysfort road hollands shop,8460B5221201,Fuzzy Expanded Name (WRatio: 90),Dalysfort Road,67.0,90.0
+35,401,Dalysfort Rd (Dr Mannix Rd Jctn),35,dalysfort rd (dr mannix rd jctn),dalysfort road dr mannix road jctn,8460B5221201,Fuzzy Expanded Name (WRatio: 90),Dalysfort Road,58.0,90.0
+36,401,Dr Mannix Rd (Rockbarton Rd),36,dr mannix rd (rockbarton rd),dr mannix road rockbarton road,8460B5223701,Token Overlap Match (Score: 1),Barna Road,,
+37,402,Shangort Rd (Cotters Shop),0,shangort rd (cotters shop),shangort road cotters shop,8460B5231601,Fuzzy Expanded Name (WRatio: 90),Shangort Road,67.0,90.0
+38,402,Shangort Rd (Church),1,shangort rd (church),shangort road church,8460B5231601,Fuzzy Expanded Name (WRatio: 90),Shangort Road,79.0,90.0
+39,402,Ballymoneen Rd (Barna Rd Jctn),2,ballymoneen rd (barna rd jctn),ballymoneen road barna road jctn,8460B5223701,Fuzzy Expanded Name (WRatio: 90),Barna Road,48.0,90.0
+40,402,Barna Road (Knocknacarra Cross),3,barna road (knocknacarra cross),barna road knocknacarra cross,8460B5223701,Fuzzy Expanded Name (WRatio: 90),Barna Road,51.0,90.0
+41,402,Knocknacarra (Topaz Filling Stat),4,knocknacarra (topaz filling stat),knocknacarra topaz filling stat,8460B5223801,Fuzzy Expanded Name (WRatio: 90),Knocknacarra,56.0,90.0
+42,402,Knocknacarra Rd (Burren View Hts),5,knocknacarra rd (burren view hts),knocknacarra road burren view hts,8460B5223801,Fuzzy Expanded Name (WRatio: 90),Knocknacarra,53.0,90.0
+43,402,Knocknacarra Rd (Opp Woodlawn),6,knocknacarra rd (opp woodlawn),knocknacarra road opposite woodlawn,8460B5223801,Fuzzy Expanded Name (WRatio: 90),Knocknacarra,51.0,90.0
+44,402,Kingston Rd (Kingston Gardens),7,kingston rd (kingston gardens),kingston road kingston gardens,8460B5224101,Fuzzy Expanded Name (WRatio: 90),Kingston Road,60.0,90.0
+45,402,Kingston Rd (Manor Drive),8,kingston rd (manor drive),kingston road manor drive,8460B5224101,Fuzzy Expanded Name (WRatio: 90),Kingston Road,68.0,90.0
+46,402,Taylors Hill Rd (Threadneedle Junct),9,taylors hill rd (threadneedle junct),taylors hill road threadneedle junct,8460B5224301,Token Overlap Match (Score: 2),Taylor's Hill Road,,
+47,402,Taylors Hill Rd (Opp Ardmore),10,taylors hill rd (opp ardmore),taylors hill road opposite ardmore,8460B5224401,Fuzzy Expanded Name (WRatio: 90),Ardmore,34.0,90.0
+48,402,Taylors Hill Rd (Highfield Park),11,taylors hill rd (highfield park),taylors hill road highfield park,8460B5224301,Token Overlap Match (Score: 2),Taylor's Hill Road,,
+49,402,Taylors Hill Rd (Opp St Annes),12,taylors hill rd (opp st annes),taylors hill road opposite street annes,8460B5258501,Token Overlap Match (Score: 2),St James Road,,
+50,402,Maunsells Rd (Opp Maunsells Rd Jct),13,maunsells rd (opp maunsells rd jct),maunsells road opposite maunsells road jct,8460B5224901,Fuzzy Expanded Name (WRatio: 90),Maunsells Road,50.0,90.0
+51,402,Maunsells Rd (Higgins DIY),14,maunsells rd (higgins diy),maunsells road higgins diy,8460B5224901,Fuzzy Expanded Name (WRatio: 90),Maunsells Road,70.0,90.0
+52,402,Colmcille Rd (Scoil Bride),15,colmcille rd (scoil bride),colmcille road scoil bride,8460B5230701,Fuzzy Expanded Name (WRatio: 90),Colmcille Road,70.0,90.0
+53,402,Colmcille Rd (Opp Community Centre),16,colmcille rd (opp community centre),colmcille road opposite community centre,8460B5230701,Fuzzy Expanded Name (WRatio: 90),Colmcille Road,52.0,90.0
+54,402,Costello Rd (Opp McDara Rd),17,costello rd (opp mcdara rd),costello road opposite mcdara road,8460B5225301,Fuzzy Expanded Name (WRatio: 90),McDara Road,49.0,90.0
+55,402,Costello Rd (HSE Clinic),18,costello rd (hse clinic),costello road hse clinic,8460B5225401,Fuzzy Expanded Name (WRatio: 90),HSE Clinic,59.0,90.0
+56,402,Newcastle Rd (University Hospital),19,newcastle rd (university hospital),newcastle road university hospital,8460B5225501,Token Overlap Match (Score: 2),Lower Newcastle Road,,
+57,402,University Of Galway,20,university of galway,university of galway,8460B5225601,Token Overlap Match (Score: 2),Uni of Galway,,
+58,402,University Rd (Opp Cathedral),21,university rd (opp cathedral),university road opposite cathedral,8460B5223701,Token Overlap Match (Score: 1),Barna Road,,
+59,402,Francis St (Opp Abbey Church),22,francis st (opp abbey church),francis street opposite abbey church,8460B5230201,Fuzzy Expanded Name (WRatio: 90),Francis Street,56.0,90.0
+60,402,Eyre Square North (Stop No 1)ARR. DEP.,23,eyre square north (stop no 1)arr. dep.,eyre square north stop no 1 arr. dep.,8460B522331,Fuzzy Expanded Name (WRatio: 90),Eyre Square,46.0,90.0
+61,402,Prospect Hill (Fahys Pub),24,prospect hill (fahys pub),prospect hill fahys pub,8460B5226201,Fuzzy Expanded Name (WRatio: 90),Prospect Hill,72.0,90.0
+62,402,Bohermore (Opp Tonerys Pub),25,bohermore (opp tonerys pub),bohermore opposite tonerys pub,8460B5226301,Fuzzy Expanded Name (WRatio: 90),Bohermore,46.0,90.0
+63,402,Bohermore (Liam Mellows Tce),26,bohermore (liam mellows tce),bohermore liam mellows tce,8460B5226301,Fuzzy Expanded Name (WRatio: 90),Bohermore,51.0,90.0
+64,402,Bohermore (Spar Filling Station),27,bohermore (spar filling station),bohermore spar filling station,8460B5226301,Fuzzy Expanded Name (WRatio: 90),Bohermore,46.0,90.0
+65,402,Dublin Rd (G Hotel),28,dublin rd (g hotel),dublin road g hotel,8460B5226901,Token Overlap Match (Score: 2),The G Hotel,,
+66,402,Dublin Rd (Opp Renmore Park),29,dublin rd (opp renmore park),dublin road opposite renmore park,8460B5227001,Fuzzy Expanded Name (WRatio: 90),Renmore Park,53.0,90.0
+67,402,Renmore Rd (Bon Secours Hosp),30,renmore rd (bon secours hosp),renmore road bon secours hosp,8460B5227101,Token Overlap Match (Score: 2),Bon Secours Hospital,,
+68,402,Renmore Rd (Opp Molloys Centra),31,renmore rd (opp molloys centra),renmore road opposite molloys centra,8460B5223701,Token Overlap Match (Score: 1),Barna Road,,
+69,402,Renmore Rd (Dun Na Mara),32,renmore rd (dun na mara),renmore road dun na mara,8460B5227301,Fuzzy Expanded Name (WRatio: 90),Dun Na Mara,63.0,90.0
+70,402,Renmore Rd (Opp Army Barracks),33,renmore rd (opp army barracks),renmore road opposite army barracks,8460B5227401,Token Overlap Match (Score: 2),Galway Army Barracks,,
+71,402,Hawthorne Drive (Blackthorn Pk),34,hawthorne drive (blackthorn pk),hawthorne drive blackthorn pk,8460B5224201,Token Overlap Match (Score: 1),Manor Drive,,
+72,402,Hawthorn Drive (Rowan Ave),35,hawthorn drive (rowan ave),hawthorn drive rowan avenue,8460B5227501,Fuzzy Expanded Name (WRatio: 90),Hawthorn Drive,68.0,90.0
+73,402,Fuschia Drive (Larchfield Ave),36,fuschia drive (larchfield ave),fuschia drive larchfield avenue,8460B5228701,Fuzzy Expanded Name (WRatio: 90),Fuschia Drive,59.0,90.0
+74,402,Ballyloughane Rd (Op Murrough Ave Jct),37,ballyloughane rd (op murrough ave jct),ballyloughane road op murrough avenue jct,8460B5227801,Fuzzy Expanded Name (WRatio: 90),Ballyloughane Road,61.0,90.0
+75,402,Ballyloughane Rd (Dairies),38,ballyloughane rd (dairies),ballyloughane road dairies,8460B5227801,Fuzzy Expanded Name (WRatio: 95),Ballyloughane Road,82.0,95.0
+76,402,ATU Galway,39,atu galway,atu galway,8460B5236501,Fuzzy Expanded Name (WRatio: 90),ATU Galway Cluain Mhuire,59.0,90.0
+77,402,Dublin Rd (Merlin Park Gate),40,dublin rd (merlin park gate),dublin road merlin park gate,8460B5228001,Token Overlap Match (Score: 2),Merlin Hospital Gate,,
+78,402,Merlin Park Terminus (Merlin Church),41,merlin park terminus (merlin church),merlin park terminus merlin church,8460B5228201,Token Overlap Match (Score: 2),Merlin Park Hospital,,
+79,404,Oranmore (Opp Oran Town Centre),0,oranmore (opp oran town centre),oranmore opposite oran town centre,8470B556161,Token Overlap Match (Score: 2),Oranmore Centre,,
+80,404,Oranmore Village (Op Calacanctius Col),1,oranmore village (op calacanctius col),oranmore village op calacanctius col,8460B5256101,Token Overlap Match (Score: 1),Corrib Village,,
+81,404,Dublin Rd (Galway Clinic),2,dublin rd (galway clinic),dublin road galway clinic,8460B8884201,Fuzzy Expanded Name (WRatio: 90),Galway Clinic,68.0,90.0
+82,404,Dublin Rd (Castlegar Complex),3,dublin rd (castlegar complex),dublin road castlegar complex,8460B5223701,Token Overlap Match (Score: 1),Barna Road,,
+83,404,Dublin Rd (Kingsvalley Hotel),4,dublin rd (kingsvalley hotel),dublin road kingsvalley hotel,8460B5223701,Token Overlap Match (Score: 1),Barna Road,,
+84,404,Dublin Rd (Opp Woodhaven),5,dublin rd (opp woodhaven),dublin road opposite woodhaven,8460B5228301,Fuzzy Expanded Name (WRatio: 90),Woodhaven,46.0,90.0
+85,404,ATU Galway,6,atu galway,atu galway,8460B5236501,Fuzzy Expanded Name (WRatio: 90),ATU Galway Cluain Mhuire,59.0,90.0
+86,404,Dublin Rd (Dawn Dairies),7,dublin rd (dawn dairies),dublin road dawn dairies,8460B5227901,Fuzzy Expanded Name (WRatio: 90),Dawn Dairies,67.0,90.0
+87,404,Dublin Rd (Opp Glenina Hgts),8,dublin rd (opp glenina hgts),dublin road opposite glenina hgts,8460B5223701,Token Overlap Match (Score: 1),Barna Road,,
+88,404,Dublin Rd (Woodlands),9,dublin rd (woodlands),dublin road woodlands,8460B5223701,Token Overlap Match (Score: 1),Barna Road,,
+89,404,Dublin Rd (Opp G Hotel),10,dublin rd (opp g hotel),dublin road opposite g hotel,8460B5226901,Token Overlap Match (Score: 2),The G Hotel,,
+90,404,College Rd Galway (Opp Loyola Pk),11,college rd galway (opp loyola pk),college road galway opposite loyola pk,8460B5232301,Fuzzy Expanded Name (WRatio: 90),College Road,48.0,90.0
+91,404,College Rd Galway (Opp Sportsground),12,college rd galway (opp sportsground),college road galway opposite sportsground,8460B5232301,Fuzzy Expanded Name (WRatio: 90),College Road,45.0,90.0
+92,404,College Rd Galway (Opp City Hall),13,college rd galway (opp city hall),college road galway opposite city hall,8460B5232301,Fuzzy Expanded Name (WRatio: 90),College Road,48.0,90.0
+93,404,Eyre Square East (Stop No 5)ARR. DEP.,14,eyre square east (stop no 5)arr. dep.,eyre square east stop no 5 arr. dep.,8460B522331,Fuzzy Expanded Name (WRatio: 90),Eyre Square,47.0,90.0
+94,404,Francis Street (Abbey Church),15,francis street (abbey church),francis street abbey church,8460B5230201,Fuzzy Expanded Name (WRatio: 90),Francis Street,68.0,90.0
+95,404,University Rd (Cathedral),16,university rd (cathedral),university road cathedral,8460B5223701,Token Overlap Match (Score: 1),Barna Road,,
+96,404,University Of Galway,17,university of galway,university of galway,8460B5225601,Token Overlap Match (Score: 2),Uni of Galway,,
+97,404,University of Galway,18,university of galway,university of galway,8460B5225601,Token Overlap Match (Score: 2),Uni of Galway,,
+98,404,Lower Newcastle (G & L Stores),19,lower newcastle (g & l stores),lower newcastle g & l stores,8460B5225501,Token Overlap Match (Score: 2),Lower Newcastle Road,,
+99,404,Lower Newcastle (Moyola Park Entr),20,lower newcastle (moyola park entr),lower newcastle moyola park entr,8460B5244101,Fuzzy Expanded Name (WRatio: 90),Moyola Park,51.0,90.0
+100,404,Lwr Newcastle (Opp St Francis Home),21,lwr newcastle (opp st francis home),lower newcastle opposite street francis home,8460B5256601,Fuzzy Expanded Name (WRatio: 90),St Francis Home,60.0,90.0
+101,404,Lower Newcastle (Greenfields Entr),22,lower newcastle (greenfields entr),lower newcastle greenfields entr,8460B5225501,Token Overlap Match (Score: 2),Lower Newcastle Road,,
+102,404,Thomas Hynes Rd (Clifton Pk),23,thomas hynes rd (clifton pk),thomas hynes road clifton pk,8460B5244401,Fuzzy Expanded Name (WRatio: 90),Thomas Hynes Road,76.0,90.0
+103,404,Thomas Hynes Rd (Fairlands Park),24,thomas hynes rd (fairlands park),thomas hynes road fairlands park,8460B5244401,Fuzzy Expanded Name (WRatio: 90),Thomas Hynes Road,69.0,90.0
+104,404,Thomas Hynes Rd (St Josephs School),25,thomas hynes rd (st josephs school),thomas hynes road street josephs school,8460B5244401,Fuzzy Expanded Name (WRatio: 90),Thomas Hynes Road,61.0,90.0
+105,404,Thomas Hynes Rd (Ardilaun Road),26,thomas hynes rd (ardilaun road),thomas hynes road ardilaun road,8460B5244401,Fuzzy Expanded Name (WRatio: 90),Thomas Hynes Road,71.0,90.0
+106,404,Thomas Hynes Rd (Opp Ardilaun Rd),27,thomas hynes rd (opp ardilaun rd),thomas hynes road opposite ardilaun road,8460B5244401,Fuzzy Expanded Name (WRatio: 90),Thomas Hynes Road,60.0,90.0
+107,404,Siobhain McKenna Rd (Corrib Pk),28,siobhain mckenna rd (corrib pk),siobhain mckenna road corrib pk,8460B5223701,Token Overlap Match (Score: 1),Barna Road,,
+108,404,John Coogan Park,29,john coogan park,john coogan park,8460B5244901,Exact Expanded Name,John Coogan Park,100.0,100.0
+109,404,Siobhain McKenna Rd (Westside Pitches),30,siobhain mckenna rd (westside pitches),siobhain mckenna road westside pitches,8460B5259601,Fuzzy Expanded Name (WRatio: 90),Westside Pitches,59.0,90.0
+110,404,Circular Rd (Opp Currach Bui),31,circular rd (opp currach bui),circular road opposite currach bui,8460B5223701,Token Overlap Match (Score: 1),Barna Road,,
+111,404,Seamus Quirke Rd (Circular Rd Junc),32,seamus quirke rd (circular rd junc),seamus quirke road circular road junc,84605257301,Fuzzy Expanded Name (WRatio: 90),Seamus Quirke Road,65.0,90.0
+112,404,Westside (Shopping Centre),33,westside (shopping centre),westside shopping centre,8460B5255401,Token Overlap Match (Score: 2),Westside Centre,,
+113,405,Gort na Bro (B&Q Retail Park),0,gort na bro (b&q retail park),gort na bro b&q retail park,8460B5256901,Fuzzy Expanded Name (WRatio: 90),Gort na Bro,58.0,90.0
+114,405,Garrai de Brun (Op Garrai de Brun Ent),1,garrai de brun (op garrai de brun ent),garrai de brun op garrai de brun ent,8460B5257001,Fuzzy Expanded Name (WRatio: 90),Garrai de Brun,56.0,90.0
+115,405,Bishop O Donnell Rd (Opp Droim Chaoin),2,bishop o donnell rd (opp droim chaoin),bishop o donnell road opposite droim chaoin,8460B5223701,Token Overlap Match (Score: 1),Barna Road,,
+116,405,Seamus Quirke Rd (Rahoon Rd Junc),3,seamus quirke rd (rahoon rd junc),seamus quirke road rahoon road junc,84605257301,Fuzzy Expanded Name (WRatio: 90),Seamus Quirke Road,68.0,90.0
+117,405,Seamus Quirke Rd (Circular Rd Junc),4,seamus quirke rd (circular rd junc),seamus quirke road circular road junc,84605257301,Fuzzy Expanded Name (WRatio: 90),Seamus Quirke Road,65.0,90.0
+118,405,Seamus Quirke Rd (Westside Shopp Cent),5,seamus quirke rd (westside shopp cent),seamus quirke road westside shopp cent,84605257301,Fuzzy Expanded Name (WRatio: 90),Seamus Quirke Road,64.0,90.0
+119,405,Seamus Quirke Rd (Corrib Park),6,seamus quirke rd (corrib park),seamus quirke road corrib park,84605257301,Fuzzy Expanded Name (WRatio: 90),Seamus Quirke Road,75.0,90.0
+120,405,Seamus Quirke Rd (Snipe Lawn),7,seamus quirke rd (snipe lawn),seamus quirke road snipe lawn,84605257301,Fuzzy Expanded Name (WRatio: 90),Seamus Quirke Road,77.0,90.0
+121,405,University of Galway,8,university of galway,university of galway,8460B5225601,Token Overlap Match (Score: 2),Uni of Galway,,
+122,405,University Of Galway,9,university of galway,university of galway,8460B5225601,Token Overlap Match (Score: 2),Uni of Galway,,
+123,405,University Rd (Opp Cathedral),10,university rd (opp cathedral),university road opposite cathedral,8460B5223701,Token Overlap Match (Score: 1),Barna Road,,
+124,405,Francis St (Opp Abbey Church),11,francis st (opp abbey church),francis street opposite abbey church,8460B5230201,Fuzzy Expanded Name (WRatio: 90),Francis Street,56.0,90.0
+125,405,Eyre Square North (Stop No 2)ARR. DEP.,12,eyre square north (stop no 2)arr. dep.,eyre square north stop no 2 arr. dep.,8460B522331,Fuzzy Expanded Name (WRatio: 90),Eyre Square,46.0,90.0
+126,405,Prospect Hill (Fahys Pub),13,prospect hill (fahys pub),prospect hill fahys pub,8460B5226201,Fuzzy Expanded Name (WRatio: 90),Prospect Hill,72.0,90.0
+127,405,Bohermore (Opp Tonerys Pub),14,bohermore (opp tonerys pub),bohermore opposite tonerys pub,8460B5226301,Fuzzy Expanded Name (WRatio: 90),Bohermore,46.0,90.0
+128,405,Bohermore (Liam Mellows Tce),15,bohermore (liam mellows tce),bohermore liam mellows tce,8460B5226301,Fuzzy Expanded Name (WRatio: 90),Bohermore,51.0,90.0
+129,405,Bohermore (Spar Filling Station),16,bohermore (spar filling station),bohermore spar filling station,8460B5226301,Fuzzy Expanded Name (WRatio: 90),Bohermore,46.0,90.0
+130,405,Tuam Rd (Riverside Estate),17,tuam rd (riverside estate),tuam road riverside estate,8460B5257201,Token Overlap Match (Score: 2),Rahoon Road Estate,,
+131,405,Tuam Rd (Opp Mervue Ind Est),18,tuam rd (opp mervue ind est),tuam road opposite mervue industrial estate,8460B5257801,Fuzzy Expanded Name (WRatio: 90),Mervue Ind Est,72.0,90.0
+132,405,Tuam Rd (Trappers Inn),19,tuam rd (trappers inn),tuam road trappers inn,8460B5223701,Token Overlap Match (Score: 1),Barna Road,,
+133,405,Connolly Ave (Pearse Avenue),20,connolly ave (pearse avenue),connolly avenue pearse avenue,8460B5258001,Fuzzy Expanded Name (WRatio: 90),Connolly Avenue,68.0,90.0
+134,405,Connolly Ave (Opp Fahys Field),21,connolly ave (opp fahys field),connolly avenue opposite fahys field,8460B5258001,Fuzzy Expanded Name (WRatio: 90),Connolly Avenue,59.0,90.0
+135,405,St James Road (Mervue Church),22,st james road (mervue church),street james road mervue church,8460B5258501,Fuzzy Expanded Name (WRatio: 90),St James Road,71.0,90.0
+136,405,St James Rd (Bayview Heights),23,st james rd (bayview heights),street james road bayview heights,8460B5260501,Fuzzy Expanded Name (WRatio: 90),Bayview Heights,62.0,90.0
+137,405,Ballybane Rd (St James Rd),24,ballybane rd (st james rd),ballybane road street james road,8460B5258501,Fuzzy Expanded Name (WRatio: 90),St James Road,69.0,90.0
+138,405,Ballybane Rd (Shopping Centre),25,ballybane rd (shopping centre),ballybane road shopping centre,8460B5235601,Token Overlap Match (Score: 2),Ballybane Centre,,
+139,405,Ballybane Ind Est,26,ballybane ind est,ballybane industrial estate,8460B5213401,Exact Expanded Name,Ballybane Industrial Estate,100.0,100.0
+140,405,Ballybane Ind Est.(Hewlett Packard),27,ballybane ind est.(hewlett packard),ballybane industrial estate. hewlett packard,8460B5213401,Fuzzy Expanded Name (WRatio: 90),Ballybane Industrial Estate,76.0,90.0
+141,407,Eyre Square East (Stop No 6),0,eyre square east (stop no 6),eyre square east stop no 6,8460B522331,Fuzzy Expanded Name (WRatio: 90),Eyre Square,59.0,90.0
+142,407,Francis Street (Abbey Church),1,francis street (abbey church),francis street abbey church,8460B5230201,Fuzzy Expanded Name (WRatio: 90),Francis Street,68.0,90.0
+143,407,Headford Rd (Opp Woodquay),2,headford rd (opp woodquay),headford road opposite woodquay,8460B5237101,Fuzzy Expanded Name (WRatio: 90),Headford Road,59.0,90.0
+144,407,Headford Rd (Galway Retail Park),3,headford rd (galway retail park),headford road galway retail park,8460B5237101,Fuzzy Expanded Name (WRatio: 90),Headford Road,58.0,90.0
+145,407,Headford Rd (Opp Dunnes Stores),4,headford rd (opp dunnes stores),headford road opposite dunnes stores,8460B5237101,Fuzzy Expanded Name (WRatio: 90),Headford Road,53.0,90.0
+146,407,Coolough Rd (Opp Menlo Park Hotel),5,coolough rd (opp menlo park hotel),coolough road opposite menlo park hotel,8460B5220801,Token Overlap Match (Score: 1),Devon Park,,
+147,407,Crestwood (Crestwood 48 to 62),6,crestwood (crestwood 48 to 62),crestwood crestwood 48 to 62,8460B5237601,Fuzzy Expanded Name (WRatio: 90),Crestwood,49.0,90.0
+148,407,Tirellan Heights (Ballinfoyle Rd),7,tirellan heights (ballinfoyle rd),tirellan heights ballinfoyle road,8460B5237701,Fuzzy Expanded Name (WRatio: 90),Tirellan Heights,65.0,90.0
+149,407,Tirellan Hts (Tirellan Hts 344-385),8,tirellan hts (tirellan hts 344-385),tirellan hts tirellan hts 344-385,8460B5237701,Token Overlap Match (Score: 1),Tirellan Heights,,
+150,407,Tirellan Heights (Headford Rd Jctn),9,tirellan heights (headford rd jctn),tirellan heights headford road jctn,8460B5237101,Fuzzy Expanded Name (WRatio: 90),Headford Road,54.0,90.0
+151,407,Headford Rd (Church),10,headford rd (church),headford road church,8460B5238001,"Exact Expanded Name (Multiple GDF matches, took first)",Headford Road Church,100.0,100.0
+152,407,Headford Rd (Sceilig Ard),11,headford rd (sceilig ard),headford road sceilig ard,8460B5237101,Fuzzy Expanded Name (WRatio: 90),Headford Road,68.0,90.0
+153,407,Bothair an Choiste (Op Baile Choiste),12,bothair an choiste (op baile choiste),bothair an choiste op baile choiste,8460B5304201,Token Overlap Match (Score: 1),An Luasán,,
+154,407,Bothair an Choiste (Murphys Centra),13,bothair an choiste (murphys centra),bothair an choiste murphys centra,8460B5304201,Token Overlap Match (Score: 1),An Luasán,,
+155,407,Bothair an Choiste (Cluain Riocard),14,bothair an choiste (cluain riocard),bothair an choiste cluain riocard,8460B5238501,Fuzzy Expanded Name (WRatio: 90),Cluain Riocard,60.0,90.0
+156,407,Bothair an Choiste (Opp Maigh Riocard),15,bothair an choiste (opp maigh riocard),bothair an choiste opposite maigh riocard,8460B5238601,Fuzzy Expanded Name (WRatio: 90),Maigh Riocard,48.0,90.0
+157,409,Eyre Square East (Stop No 8),0,eyre square east (stop no 8),eyre square east stop no 8,8460B522331,Fuzzy Expanded Name (WRatio: 90),Eyre Square,59.0,90.0
+159,409,College Rd Galway (City Hall),2,college rd galway (city hall),college road galway city hall,8460B5232301,Fuzzy Expanded Name (WRatio: 90),College Road,59.0,90.0
+160,409,College Rd Galway (Sportsground),3,college rd galway (sportsground),college road galway sportsground,8460B5232301,Fuzzy Expanded Name (WRatio: 90),College Road,55.0,90.0
+161,409,College Rd Galway (Loyola Park),4,college rd galway (loyola park),college road galway loyola park,8460B5236701,Fuzzy Expanded Name (WRatio: 90),Loyola Park,52.0,90.0
+162,409,Dublin Rd (G Hotel),5,dublin rd (g hotel),dublin road g hotel,8460B5226901,Token Overlap Match (Score: 2),The G Hotel,,
+163,409,Dublin Rd (Opp Renmore Park),6,dublin rd (opp renmore park),dublin road opposite renmore park,8460B5227001,Fuzzy Expanded Name (WRatio: 90),Renmore Park,53.0,90.0
+164,409,Dublin Rd (Glenina Heights),7,dublin rd (glenina heights),dublin road glenina heights,8460B5243501,Fuzzy Expanded Name (WRatio: 90),Glenina Heights,71.0,90.0
+165,409,Dublin Rd (Opp Dawn Dairies),8,dublin rd (opp dawn dairies),dublin road opposite dawn dairies,8460B5227901,Fuzzy Expanded Name (WRatio: 90),Dawn Dairies,53.0,90.0
+166,409,ATU Galway,9,atu galway,atu galway,8460B5236501,Fuzzy Expanded Name (WRatio: 90),ATU Galway Cluain Mhuire,59.0,90.0
+167,409,Dublin Rd (Opp Galway Crystal Jctn),10,dublin rd (opp galway crystal jctn),dublin road opposite galway crystal jctn,8460B5241501,Fuzzy Expanded Name (WRatio: 90),Galway Crystal,52.0,90.0
+168,409,Dublin Rd (Opp Castlegar Complex),11,dublin rd (opp castlegar complex),dublin road opposite castlegar complex,8460B5223701,Token Overlap Match (Score: 1),Barna Road,,
+169,409,Doughiska Rd (An Fiodan),12,doughiska rd (an fiodan),doughiska road an fiodan,8460B5241901,Fuzzy Expanded Name (WRatio: 90),An Fiodan,55.0,90.0
+170,409,Doughiska Rd (Amber Hse Hotel),13,doughiska rd (amber hse hotel),doughiska road amber hse hotel,8460B5242601,Fuzzy Expanded Name (WRatio: 90),Doughiska Road,64.0,90.0
+171,409,Doughiska Rd (Merlin Woods Prm Sch),14,doughiska rd (merlin woods prm sch),doughiska road merlin woods prm sch,8460B5242601,Fuzzy Expanded Name (WRatio: 90),Doughiska Road,57.0,90.0
+172,409,Doughiska Rd (Nestors Centra),15,doughiska rd (nestors centra),doughiska road nestors centra,8460B5242601,Fuzzy Expanded Name (WRatio: 90),Doughiska Road,65.0,90.0
+173,409,Doughiska Rd (NCT Entrance),16,doughiska rd (nct entrance),doughiska road nct entrance,8460B5242601,Fuzzy Expanded Name (WRatio: 90),Doughiska Road,68.0,90.0
+174,409,Doughiska Rd (Op Brierhill Shop Cen),17,doughiska rd (op brierhill shop cen),doughiska road op brierhill shop cen,8460B5242601,Fuzzy Expanded Name (WRatio: 90),Doughiska Road,56.0,90.0
+175,409,Ballybrit Crescent,18,ballybrit crescent,ballybrit crescent,8460B5234201,"Exact Expanded Name (Multiple GDF matches, took first)",Ballybrit Crescent,100.0,100.0
+176,409,Ballybrit Crescent,19,ballybrit crescent,ballybrit crescent,8460B5234201,"Exact Expanded Name (Multiple GDF matches, took first)",Ballybrit Crescent,100.0,100.0
+177,409,Parkmore Rd (Parkmore Ind Est),20,parkmore rd (parkmore ind est),parkmore road parkmore industrial estate,8460B555431,Fuzzy Expanded Name (WRatio: 90),Parkmore Road,49.0,90.0
